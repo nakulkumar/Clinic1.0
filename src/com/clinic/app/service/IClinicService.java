@@ -1,4 +1,6 @@
-package com.clinic.app;
+package com.clinic.app.service;
+
+import com.clinic.app.entity.User;
 
 
 public interface IClinicService {

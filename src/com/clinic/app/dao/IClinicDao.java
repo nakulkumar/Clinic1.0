@@ -1,4 +1,6 @@
-package com.clinic.app;
+package com.clinic.app.dao;
+
+import com.clinic.app.entity.User;
 
 
 public interface IClinicDao {
