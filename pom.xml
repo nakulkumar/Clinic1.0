@@ -112,6 +112,13 @@
 			<version>1.4</version>
 		</dependency>
 
+		<!-- Remove jasper exception and using prefix='c' in jsp -->
+		<!-- <dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency> -->
+
 	</dependencies>
 
 	<build>
