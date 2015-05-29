@@ -1,4 +1,4 @@
-package com.clinic.app.entity;
+package com.clinic.app;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

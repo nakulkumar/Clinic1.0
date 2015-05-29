@@ -1,4 +1,4 @@
-package com.clinic.app.dao;
+package com.clinic.app;
 
 
 
@@ -6,8 +6,6 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import com.clinic.app.entity.User;
 
 
 @Repository
