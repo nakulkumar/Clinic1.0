@@ -1,10 +1,14 @@
-package com.clinic.app;
+package com.clinic.app.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.clinic.app.entity.User;
+import com.clinic.app.service.IClinicService;
 
 @Controller
 public class ClinicController {
@@ -20,4 +24,8 @@ public class ClinicController {
 		return "index";
 	}
 
+	@RequestMapping(value="addPatient",method=RequestMethod.GET)
+	public String addPatient(@ModelAttribute("user") User user,Model model){
+		return "addPatient";
+	}
 }
