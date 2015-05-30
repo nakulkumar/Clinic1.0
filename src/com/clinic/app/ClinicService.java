@@ -10,14 +10,16 @@ public class ClinicService implements IClinicService{
 	@Autowired
 	IClinicDao clinicDao;
 	
-	public ClinicService(){
-		
-	}
-	
 	@Transactional
 	@Override
 	public User getdetails() {
 		return clinicDao.getdetails();
+	}
+
+	@Transactional(readOnly=true)
+	@Override
+	public Login validateLogin(Login login) {
+		return clinicDao.validateLogin(login.getUsername(),login.getPassword());
 	}
 
 	
