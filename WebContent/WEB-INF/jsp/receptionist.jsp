@@ -110,14 +110,14 @@
 				<h2>Add New Patient</h2>
 			</div>
 			<hr>
-			<form class="add-patient-form" action="" method="post">
+			<form class="add-patient-form" action="addPatientDetails" method="post">
 				<table class="add-patient-table">
 					<tr>
 						<div class="form-group">
 							<td><label for="firstname" class="form-label">Firstname
 									:</label></td>
 							<td><input type="text" id="firstname" class="inputfield"
-								size="30" placeholder="Enter Firstname" required></td>
+								size="30" name="firstname" placeholder="Enter Firstname" required></td>
 						</div>
 					</tr>
 
@@ -126,7 +126,7 @@
 							<td><label for="lastname" class="form-label">Lastname
 									:</label></td>
 							<td><input type="text" id="lastname" class="inputfield"
-								size="30" placeholder="Enter Lastname"></td>
+								size="30" name="lastname" placeholder="Enter Lastname"></td>
 						</div>
 					</tr>
 
@@ -134,7 +134,7 @@
 						<div class="form-group">
 							<td><label for="age" class="form-label">Age :</label></td>
 							<td><input type="number" id="age" class="inputfield"
-								size="30" placeholder="Enter Age" required></td>
+								size="30" name="age" placeholder="Enter Age" required></td>
 						</div>
 					</tr>
 
@@ -151,7 +151,7 @@
 						<div class="form-group">
 							<td><label for="mobile" class="form-label">Mobile :</label></td>
 							<td><input type="text" id="mobile" class="inputfield"
-								size="30" placeholder="10 Digit Mobile Number"></td>
+								size="30" name="mobile" placeholder="10 Digit Mobile Number"></td>
 						</div>
 					</tr>
 
@@ -160,7 +160,7 @@
 							<td><label for="landline" class="form-label">Landline
 									:</label></td>
 							<td><input type="text" id="landline" class="inputfield"
-								size="30" placeholder="8 Digit Landline Number"></td>
+								size="30" name="landline" placeholder="8 Digit Landline Number"></td>
 						</div>
 					</tr>
 
@@ -169,7 +169,7 @@
 							<td><label for="dependent" class="form-label">Dependent(s)
 									:</label></td>
 							<td><textarea id="dependent" class="inputfield"
-									placeholder="Dependent name" rows="2" cols="33"></textarea></td>
+									name="dependent" placeholder="Dependent name" rows="2" cols="33"></textarea></td>
 						</div>
 					</tr>
 
@@ -178,7 +178,7 @@
 							<td><label for="address" class="form-label">Address
 									:</label></td>
 							<td><textarea id="address" class="inputfield"
-									placeholder="Enter Address" rows="5" cols="33"></textarea></td>
+									name="address" placeholder="Enter Address" rows="5" cols="33"></textarea></td>
 						</div>
 					</tr>
 
@@ -187,7 +187,7 @@
 							<td><label for="refferedby" class="form-label">Reffered
 									By :</label></td>
 							<td><input type="text" id="refferedby" class="inputfield"
-								size="30" placeholder="Person who reffered"></td>
+								size="30" name="refferedby" placeholder="Person who reffered"></td>
 						</div>
 					</tr>
 

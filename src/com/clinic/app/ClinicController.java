@@ -18,22 +18,15 @@ public class ClinicController {
 	@Autowired
 	IClinicService clinicService;
 
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public String welcome(Model model) {
-		model.addAttribute("message", "hello guyz");
-		User user = clinicService.getdetails();
-		System.out.println(user.getId() + " " + user.getFirstname());
-		return "index";
-	}
-
+	//To take to the login screen
 	@RequestMapping(value = "login", method = RequestMethod.GET)
 	public String userLogin() {
 		return "index";
 	}
 
+	//to validate login
 	@RequestMapping(value = "validateLogin", method = RequestMethod.GET)
-	public String validateLogin(@ModelAttribute("loginDetails") Login login,
-			Model model) {
+	public String validateLogin(@ModelAttribute("loginDetails") Login login,Model model) {
 		LOG.info("username : {} , password : {}", login.getUsername(),
 				login.getPassword());
 		Login validUser = clinicService.validateLogin(login);
@@ -44,10 +37,18 @@ public class ClinicController {
 			return "receptionist";
 		}
 		else {
+			//dummy jsp success to test the things
 			model.addAttribute("username", login.getUsername());
 			model.addAttribute("password", login.getPassword());
 			return "success";
 		}
+	}
+	
+	//to add patient details in the db 
+	@RequestMapping(value="addPatientDetails",method=RequestMethod.POST)
+	public String addPatientDetails(@ModelAttribute("userDetails")User user,Model model){
+		System.out.println(user.getFirstname()+" "+user.getAge()+user.getSex());
+		return "success";
 	}
 
 }
