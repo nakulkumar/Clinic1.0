@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="user_credential")
+@Table(name = "user_credential")
 public class User {
 
 	int id;
@@ -20,88 +20,104 @@ public class User {
 	String sex;
 	String address;
 	int age;
-	
+
 	@Id
 	@GeneratedValue
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	@Column(name = "firstname")
 	public String getFirstname() {
 		return firstname;
 	}
+
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
 	}
-	
-	@Column(name="lastname")
+
+	@Column(name = "lastname")
 	public String getLastname() {
 		return lastname;
 	}
+
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-	
-	@Column(name="mobile")
+
+	@Column(name = "mobile")
 	public String getMobile() {
 		return mobile;
 	}
+
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
-	
-	@Column(name="landline")
+
+	@Column(name = "landline")
 	public String getLandline() {
 		return landline;
 	}
+
 	public void setLandline(String landline) {
 		this.landline = landline;
 	}
-	
-	@Column(name="reffered_by")
+
+	@Column(name = "reffered_by")
 	public String getRefferedBy() {
 		return refferedBy;
 	}
+
 	public void setRefferedBy(String refferedBy) {
 		this.refferedBy = refferedBy;
 	}
-	
-	@Column(name="dependent")
+
+	@Column(name = "dependent")
 	public String getDependent() {
 		return dependent;
 	}
+
 	public void setDependent(String dependent) {
 		this.dependent = dependent;
 	}
-	
-	@Column(name="sex")
+
+	@Column(name = "sex")
 	public String getSex() {
 		return sex;
 	}
+
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
-	
-	@Column(name="address")
+
+	@Column(name = "address")
 	public String getAddress() {
 		return address;
 	}
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	@Column(name="age")
+
+	@Column(name = "age")
 	public int getAge() {
 		return age;
 	}
+
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", firstname=" + firstname + ", lastname="
+				+ lastname + ", mobile=" + mobile + ", landline=" + landline
+				+ ", refferedBy=" + refferedBy + ", dependent=" + dependent
+				+ ", sex=" + sex + ", address=" + address + ", age=" + age
+				+ "]";
+	}
 }

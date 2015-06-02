@@ -22,6 +22,12 @@ public class ClinicService implements IClinicService{
 		return clinicDao.validateLogin(login.getUsername(),login.getPassword());
 	}
 
+	@Transactional
+	@Override
+	public boolean persistPatientDetails(User user) {
+        return clinicDao.persistPatientDetails(user);
+	}
+
 	
 	
 	

@@ -48,6 +48,12 @@ public class ClinicController {
 	@RequestMapping(value="addPatientDetails",method=RequestMethod.POST)
 	public String addPatientDetails(@ModelAttribute("userDetails")User user,Model model){
 		System.out.println(user.getFirstname()+" "+user.getAge()+user.getSex());
+		if(clinicService.persistPatientDetails(user)){
+			System.out.println("data inserted");
+		}
+		else{
+			System.out.println("some error occured");
+		}
 		return "success";
 	}
 

@@ -141,9 +141,9 @@
 					<tr>
 						<div class="form-group">
 							<td><label for="sex" class="form-label">Sex :</label></td>
-							<td><input type="radio" name="sex" id="sex" value="male"
+							<td><input type="radio" name="sex" id="sex" value="m"
 								checked>Male <input type="radio" name="sex" id="sex"
-								value="female">Female</td>
+								value="f">Female</td>
 						</div>
 					</tr>
 
@@ -187,7 +187,7 @@
 							<td><label for="refferedby" class="form-label">Reffered
 									By :</label></td>
 							<td><input type="text" id="refferedby" class="inputfield"
-								size="30" name="refferedby" placeholder="Person who reffered"></td>
+								size="30" name="refferedBy" placeholder="Person who reffered"></td>
 						</div>
 					</tr>
 

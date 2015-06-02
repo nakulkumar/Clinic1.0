@@ -1,10 +1,11 @@
 package com.clinic.app;
 
-
 public interface IClinicDao {
 
 	public User getdetails();
 
-	public Login validateLogin(String username,String password);
-	
+	public Login validateLogin(String username, String password);
+
+	public boolean persistPatientDetails(User user);
+
 }
