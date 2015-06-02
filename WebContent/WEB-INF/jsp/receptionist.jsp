@@ -51,14 +51,14 @@
 				<h2>Search</h2>
 			</div>
 			<hr>
-			<form class="search-details-form" action="" method="post">
+			<form class="search-details-form" action="findPatient" method="post">
 				<table class="search-details-table">
 					<tr>
 						<div class="form-group">
 							<td><label for="firstname" class="form-label">Firstname
 									:</label></td>
 							<td><input type="text" id="search-firstname"
-								class="inputfield" size="30" placeholder="Enter Firstname"></td>
+								class="inputfield" size="30" name="firstname" placeholder="Enter Firstname"></td>
 						</div>
 					</tr>
 
@@ -67,7 +67,7 @@
 							<td><label for="lastname" class="form-label">Lastname
 									:</label></td>
 							<td><input type="text" id="search-lastname"
-								class="inputfield" size="30" placeholder="Enter Lastname"></td>
+								class="inputfield" size="30" name="lastname" placeholder="Enter Lastname"></td>
 						</div>
 					</tr>
 
@@ -75,7 +75,7 @@
 						<div class="form-group">
 							<td><label for="mobile" class="form-label">Mobile :</label></td>
 							<td><input type="text" id="search-mobile" class="inputfield"
-								size="30" placeholder="10 Digit Mobile Number"></td>
+								size="30" name="mobile" placeholder="10 Digit Mobile Number"></td>
 						</div>
 					</tr>
 
@@ -84,7 +84,7 @@
 							<td><label for="dependent" class="form-label">Dependent(s)
 									:</label></td>
 							<td><input type="text" id="search-dependent"
-								class="inputfield" size="30" placeholder="Dependent name"></td>
+								class="inputfield" size="30" name="dependent" placeholder="Dependent name"></td>
 						</div>
 					</tr>
 
@@ -93,7 +93,7 @@
 							<td><label for="refferedby" class="form-label">Reffered
 									By :</label></td>
 							<td><input type="text" id="search-refferedby"
-								class="inputfield" size="30" placeholder="Person who reffered"></td>
+								class="inputfield" size="30" name="refferedBy" placeholder="Person who reffered"></td>
 						</div>
 					</tr>
 

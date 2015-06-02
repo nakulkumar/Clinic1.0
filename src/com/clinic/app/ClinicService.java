@@ -1,5 +1,7 @@
 package com.clinic.app;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,6 +28,12 @@ public class ClinicService implements IClinicService{
 	@Override
 	public boolean persistPatientDetails(User user) {
         return clinicDao.persistPatientDetails(user);
+	}
+
+	@Transactional(readOnly=true)
+	@Override
+	public List<User> findPatient(SearchForm search) {
+		return clinicDao.findPatient(search);
 	}
 
 	

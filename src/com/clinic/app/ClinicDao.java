@@ -1,8 +1,14 @@
 package com.clinic.app;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Disjunction;
+import org.hibernate.criterion.Property;
 import org.hibernate.criterion.Restrictions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,5 +55,25 @@ public class ClinicDao implements IClinicDao {
 			LOG.error("Some error occured while adding data into db",e);
 			return false;
 		}
+	}
+
+	@Override
+	public List<User> findPatient(SearchForm search) {
+		List<User> patientList=new ArrayList<User>();
+		
+		Criteria cr = sessionFactory.getCurrentSession().createCriteria(User.class);
+		
+		Disjunction orExpression = Restrictions.disjunction();
+
+		orExpression.add(Property.forName("firstname").eq(search.getFirstname()))
+        .add(Property.forName("lastname").eq(search.getLastname()))
+        .add(Property.forName("mobile").eq(search.getMobile()))
+        .add(Property.forName("dependent").eq(search.getDependent()))
+        .add(Property.forName("refferedBy").eq(search.getRefferedBy()));
+
+		cr.add(orExpression);
+		
+		patientList=(List<User>)cr.list();
+		return patientList;
 	}
 }

@@ -1,5 +1,7 @@
 package com.clinic.app;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +56,18 @@ public class ClinicController {
 		else{
 			System.out.println("some error occured");
 		}
+		return "success";
+	}
+	
+	//to search for patient in the db
+	@RequestMapping(value="findPatient",method=RequestMethod.POST)
+	public String findPatient(@ModelAttribute("searchForm") SearchForm search,Model model){
+		//fetch details of all the patients as a list
+		List<User> patientList = clinicService.findPatient(search);
+		
+		/*for(User user:patientList){
+			System.out.println(user.getFirstname()+" "+user.getMobile());
+		}*/
 		return "success";
 	}
 
