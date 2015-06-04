@@ -1,10 +1,15 @@
-package com.clinic.app;
+package com.clinic.app.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.clinic.app.Login;
+import com.clinic.app.SearchForm;
+import com.clinic.app.User;
+import com.clinic.app.dao.IClinicDao;
 
 @Service
 public class ClinicService implements IClinicService{

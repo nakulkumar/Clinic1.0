@@ -1,6 +1,10 @@
-package com.clinic.app;
+package com.clinic.app.dao;
 
 import java.util.List;
+
+import com.clinic.app.Login;
+import com.clinic.app.SearchForm;
+import com.clinic.app.User;
 
 public interface IClinicDao {
 

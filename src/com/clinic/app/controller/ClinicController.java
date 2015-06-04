@@ -1,4 +1,4 @@
-package com.clinic.app;
+package com.clinic.app.controller;
 
 import java.util.List;
 
@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.clinic.app.Login;
+import com.clinic.app.SearchForm;
+import com.clinic.app.User;
+import com.clinic.app.service.IClinicService;
 import com.clinic.app.utils.ClinicUtils;
 
 @Controller
