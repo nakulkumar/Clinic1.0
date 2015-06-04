@@ -1,7 +1,6 @@
 package com.clinic.app;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -74,6 +73,11 @@ public class ClinicDao implements IClinicDao {
 		cr.add(orExpression);
 		
 		patientList=(List<User>)cr.list();
+		
+		for(User user:patientList){
+			System.out.println(user);
+		}
+		
 		return patientList;
 	}
 }

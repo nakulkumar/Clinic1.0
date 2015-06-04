@@ -35,8 +35,4 @@ public class ClinicService implements IClinicService{
 	public List<User> findPatient(SearchForm search) {
 		return clinicDao.findPatient(search);
 	}
-
-	
-	
-	
 }

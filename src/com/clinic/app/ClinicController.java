@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.clinic.app.utils.ClinicUtils;
+
 @Controller
 public class ClinicController {
 
@@ -21,7 +23,7 @@ public class ClinicController {
 	IClinicService clinicService;
 
 	//To take to the login screen
-	@RequestMapping(value = "login", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String userLogin() {
 		return "index";
 	}
@@ -56,13 +58,19 @@ public class ClinicController {
 		else{
 			System.out.println("some error occured");
 		}
+		//display hidden div whether data inserted successfully or not
 		return "success";
 	}
 	
 	//to search for patient in the db
 	@RequestMapping(value="findPatient",method=RequestMethod.POST)
 	public String findPatient(@ModelAttribute("searchForm") SearchForm search,Model model){
-		//fetch details of all the patients as a list
+		
+		//if nothing is entered and button is pressed, reload page again.
+		if (ClinicUtils.isEmpty(search)) {
+			return "receptionist";
+		}
+		//fetch details of all the patients as a list.
 		List<User> patientList = clinicService.findPatient(search);
 		
 		for(User user:patientList){

@@ -48,4 +48,10 @@ public class SearchForm {
 		this.refferedBy = refferedBy;
 	}
 
+	@Override
+	public String toString() {
+		return "SearchForm [firstname=" + firstname + ", lastname=" + lastname
+				+ ", mobile=" + mobile + ", dependent=" + dependent
+				+ ", refferedBy=" + refferedBy + "]";
+	}
 }

@@ -1,10 +1,8 @@
-<%-- <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> --%>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Clinic App</title>
 	<!-- core css -->
-	<%-- <link href="<c:url value="css/bootstrap.min.css" />" rel="stylesheet"> --%>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<!-- custom css for this file -->
 	<link rel="stylesheet" type="text/css" href="css/isignin.css">
