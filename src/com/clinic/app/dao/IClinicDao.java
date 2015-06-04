@@ -2,9 +2,9 @@ package com.clinic.app.dao;
 
 import java.util.List;
 
-import com.clinic.app.Login;
-import com.clinic.app.SearchForm;
-import com.clinic.app.User;
+import com.clinic.app.entity.Login;
+import com.clinic.app.entity.SearchForm;
+import com.clinic.app.entity.User;
 
 public interface IClinicDao {
 

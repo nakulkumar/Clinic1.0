@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.clinic.app.Login;
-import com.clinic.app.SearchForm;
-import com.clinic.app.User;
+import com.clinic.app.entity.Login;
+import com.clinic.app.entity.SearchForm;
+import com.clinic.app.entity.User;
 import com.clinic.app.service.IClinicService;
 import com.clinic.app.utils.ClinicUtils;
 

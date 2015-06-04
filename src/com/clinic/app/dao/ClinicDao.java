@@ -14,9 +14,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.clinic.app.Login;
-import com.clinic.app.SearchForm;
-import com.clinic.app.User;
+import com.clinic.app.entity.Login;
+import com.clinic.app.entity.SearchForm;
+import com.clinic.app.entity.User;
 
 @Repository
 public class ClinicDao implements IClinicDao {

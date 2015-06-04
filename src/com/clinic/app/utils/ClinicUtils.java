@@ -1,6 +1,6 @@
 package com.clinic.app.utils;
 
-import com.clinic.app.SearchForm;
+import com.clinic.app.entity.SearchForm;
 
 public class ClinicUtils {
 

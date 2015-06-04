@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.clinic.app.Login;
-import com.clinic.app.SearchForm;
-import com.clinic.app.User;
 import com.clinic.app.dao.IClinicDao;
+import com.clinic.app.entity.Login;
+import com.clinic.app.entity.SearchForm;
+import com.clinic.app.entity.User;
 
 @Service
 public class ClinicService implements IClinicService{
