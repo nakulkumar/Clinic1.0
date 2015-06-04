@@ -60,6 +60,7 @@ public class ClinicDao implements IClinicDao {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<User> findPatient(SearchForm search) {
 		List<User> patientList=new ArrayList<User>();

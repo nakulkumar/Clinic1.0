@@ -77,9 +77,10 @@ public class ClinicController {
 		//fetch details of all the patients as a list.
 		List<User> patientList = clinicService.findPatient(search);
 		
-		for(User user:patientList){
+		/*for(User user:patientList){
 			System.out.println(user.getFirstname()+" "+user.getMobile());
-		}
-		return "success";
+		}*/
+		model.addAttribute("patientList",patientList);
+		return "searchResults";
 	}
 }
